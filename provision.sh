@@ -23,4 +23,7 @@ cd /home/vagrant/provisioner_puppet
 puppet apply testuser.pp
 puppet apply testdirectory.pp
 
+rm -rf /etc/puppet/modules
+ln -s /home/vagrant/provisioner_puppet/modules /etc/puppet/
 
+puppet apply testmodule_template.pp
